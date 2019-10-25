@@ -6,6 +6,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -44,12 +45,14 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              '''You have pushed the\n 
-              button this many times:''',
+              '''You have pushed the 
+  button this many times:''',
+              textAlign: TextAlign.center,
             ),
+            SizedBox(height: 50),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.display1,
+              style: Theme.of(context).textTheme.display4,
             ),
           ],
         ),
